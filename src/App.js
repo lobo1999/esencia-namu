@@ -1,11 +1,14 @@
-import './App.css';
+import "./styles/App.css";
+import { Navbar, Home, Footer } from "./components";
 
 function App() {
   return (
     <div className="App">
+      <Navbar />
       <header className="App-header">
-        Aquí empieza nuestro proyecto Resonancia Gaia
+        <Home />
       </header>
+      <Footer />
     </div>
   );
 }
