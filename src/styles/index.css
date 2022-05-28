@@ -16,7 +16,6 @@
 
 .container {
   margin: 0 auto;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -29,7 +28,7 @@ nav {
   right: 0;
   z-index: 0;
   background-color: var(--dark);
-  padding: 16rem 2rem;
+  padding: 2rem 3rem;
   border-bottom: .1875rem solid var(--primary);
 }
 
@@ -121,11 +120,75 @@ h1 {
   background-color: var(--primary);
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 768px) {
   .hamburger {
     display: none;
   }
   .menu {
     display: block;
+  }
+}
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+  .hamburger {
+    display: block;
+  }
+  .menu {
+    display: none;
+  }
+  body {
+      background-color: yellow;
+  }
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+  .hamburger {
+    display: block;
+  }
+  .menu {
+    display: none;
+  }
+  body {
+      background-color: yellow;
+  }
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px){
+  .hamburger {
+    display: none;
+  }
+  .menu {
+    display: block;
+  }
+  body {
+    background-color: blue;
+}
+}
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px){
+  .hamburger {
+    display: none;
+  }
+  .menu {
+    display: block;
+  }
+  body {
+      background-color: green;
+  }
+}
+
+/* Media Query for Large screens */
+@media (min-width: 1281px) {
+  .hamburger {
+    display: none;
+  }
+  .menu {
+    display: block;
+  }
+  body {
+      background-color: white;
   }
 }

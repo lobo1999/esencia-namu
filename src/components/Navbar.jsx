@@ -23,13 +23,12 @@ const Navbar = () => {
           <a href="/">Inicio</a>
           <a href="/destinations">Destinos</a>
           <a href="/about">Quiénes Somos</a>
-
-          <button className="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
         </div>
+        <button className="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </nav>
   );
