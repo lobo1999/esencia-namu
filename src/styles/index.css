@@ -191,9 +191,6 @@
   .menu {
     display: none;
   }
-  body {
-      background-color: yellow;
-  }
 }
 
 /* Media Query for low resolution  Tablets, Ipads */
@@ -203,9 +200,6 @@
   }
   .menu {
     display: none;
-  }
-  body {
-      background-color: yellow;
   }
 }
 
@@ -217,9 +211,6 @@
   .menu {
     display: block;
   }
-  body {
-    background-color: blue;
-}
 }
 
 /* Media Query for Laptops and Desktops */
@@ -229,9 +220,6 @@
   }
   .menu {
     display: block;
-  }
-  body {
-      background-color: green;
   }
 }
 
@@ -243,8 +231,5 @@
   }
   .menu {
     display: block;
-  }
-  body {
-      background-color: white;
   }
 }

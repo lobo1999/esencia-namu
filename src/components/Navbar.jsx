@@ -34,6 +34,7 @@ const Navbar = () => {
     </nav>
   );
 
+  // eslint-disable-next-line no-unreachable
   const hamburger = document.querySelector(".hamburger");
   hamburger.addEventListener("click", function () {
     this.hamburger.toggle("is-active");
