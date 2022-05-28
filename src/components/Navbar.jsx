@@ -16,15 +16,28 @@ const Navbar = () => {
   const title = "Esencia Namú";
 
   return (
-    <div>
-      <div>{title}</div>
-      <h1>Muy buenas a todos guapiisimos *-*</h1>
-      <div className="links">
-        <a href="/">Inicio</a>
-        <a href="/destinations">Destinos</a>
+    <nav>
+      <div className="container">
+        <h1> {title} </h1>
+        <div className="menu">
+          <a href="/">Inicio</a>
+          <a href="/destinations">Destinos</a>
+          <a href="/about">Quiénes Somos</a>
+
+          <button className="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
       </div>
-    </div>
+    </nav>
   );
+
+  const hamburger = document.querySelector(".hamburger");
+  hamburger.addEventListener("click", function () {
+    this.hamburger.toggle("is-active");
+  });
 };
 
 export default Navbar;
