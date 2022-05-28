@@ -13,12 +13,13 @@ const Navbar = () => {
     XoXo Luis Lobo
     */
 
-  const title = "Esencia Namú";
 
   return (
-    <nav>
-      <div className="container">
-        <h1> {title} </h1>
+    <nav className="nav--principal glass blur">
+      <div className="navbar--container">
+        <a href="###">
+          <span><i className="icon-namu"></i></span>
+        </a>
         <div className="menu">
           <a href="/">Inicio</a>
           <a href="/destinations">Destinos</a>

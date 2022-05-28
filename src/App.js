@@ -1,15 +1,13 @@
 import { Navbar, Home, Footer } from "./components";
 import "./styles/index.css";
+import "./styles/styles.css";
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <header className="App-header">
+      <div className="App">
         <Home />
-      </header>
-      <Footer />
-    </div>
+        <Navbar />
+      </div>
   );
 }
 

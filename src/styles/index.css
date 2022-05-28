@@ -2,51 +2,105 @@
 
 /* Estilos básicos para que le Senior Manuel los mejore */
 :root {
-  --primary:#2CB65C;
+  --primary:#096225;
   --light:#EEEEEE;
   --dark:#212121;
 }
 
 * {
   margin: 0;
+  padding: 0;
   font-family: "Quicksand";
   color: #333;
   box-sizing: border-box;
 }
 
-.container {
-  margin: 0 auto;
+.navbar--container {
+  padding: 0.5em 5.5em;
   display: flex;
   align-items: center;
+  justify-content: space-between; 
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0.9375rem 2.1875rem rgba(0, 0, 0, 0.05);
+}
+
+.mainContent{
+  display: flex;
   justify-content: space-between;
+  position: absolute;
+  top: 8em;
+  height: 60vh;
+  border-radius: 3.5rem;
+  width: 90%;
+  margin: 0 0 4rem 4rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 }
 
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 0;
-  background-color: var(--dark);
-  padding: 2rem 3rem;
-  border-bottom: .1875rem solid var(--primary);
+.mainContent__about {
+  transform: translateX(-3.25rem);
+  max-width: 43.75rem;
+  max-height: 14rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+  padding: 2.5rem;
+  padding-left: 5.5rem;
+  margin-top: 6rem;
+  margin-left: 2rem;
 }
 
-h1 {
-  color: #FFF;
-  font-size: 1.75rem;
-  font-weight:900;
-  letter-spacing: .125rem;
-  text-transform: uppercase;
+.mainContent__h1 {
+  letter-spacing: 1.5px;
+  border-bottom: 2px solid var(--primary);
+  margin-bottom: 0.7rem;
+}
+
+.mainContentHolder__img {
+  position: absolute;
+  right: -2em;
+  height: fit-content;
+  border-radius: 1rem;
+  margin-top: 4.5rem;
+  box-shadow: 0 0.9375rem 2.1875rem rgba(0, 0, 0, 0.274);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainContent__img {
+  background-size: cover;
+	background-position: center center;
+  max-height: 18em;
+  border-radius: 1em;
+}
+
+
+.blur{
+  backdrop-filter: blur(10px);
+}
+
+.nav--principal{
+  position: relative;
+  top: 4rem;
+  margin: 0 2rem;
+  border-radius: 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.icon-namu {
+  content: url(../assets/Namu.svg);
+  height: 5em;
 }
 
 .hamburger {
   display: block;
   position: relative;
   z-index: 1;
-
   user-select: none;
-
   appearance: none;
   border: none;
   outline: none;
@@ -107,7 +161,7 @@ h1 {
 }
 
 .menu a {
-  color: #FFF;
+  color: #000;
   margin: 0 1rem;
   font-weight: 600;
   text-decoration: none;
@@ -118,6 +172,7 @@ h1 {
 
 .menu a.is-active, .menu a:hover {
   background-color: var(--primary);
+  color: #fff;
 }
 
 @media (min-width: 768px) {
@@ -179,6 +234,7 @@ h1 {
       background-color: green;
   }
 }
+
 
 /* Media Query for Large screens */
 @media (min-width: 1281px) {
