@@ -1,29 +1,26 @@
 import React from "react";
-
+import { NavLink } from "react-router-dom";
 const Navbar = () => {
-  /*
-    En esta parte (antes de el return) podemos declarar contantes, hooks o lo que sea que vayamos
-    a utilizar dentro de nuestro componente y de esta manera evitar poner valores
-    'quemados' directamente.
+  
+  const [isNavbarActive, setIsNavbarActive] = React.useState(false);
+  
+  const clickWindow = () => {
+    setIsNavbarActive(true);
+  };
 
-    Nota: los componentes en React son los que tienen terminación .jsx y en ellos
-    uno escribe el código HTML y JavaScript por lo tanto en el mismo
-    componente vamos a encontrar el diseño y la lógica de los componentes.
-    
-    XoXo Luis Lobo
-    */
-
-
+  const menuWindow = () => {
+    setIsNavbarActive(false);
+  };
+  
   return (
-    <nav className="nav--principal glass blur">
-      <div className="navbar--container">
-        <a href="###">
+    <nav id="navbar" className={`glass blur${isNavbarActive ? " nav--top" : " nav--principal"}`}>
+      <div className="nav--container">
+        <NavLink to="/" onClick={menuWindow}>
           <span><i className="icon-namu"></i></span>
-        </a>
+        </NavLink>
         <div className="menu">
-          <a href="/">Inicio</a>
-          <a href="/destinations">Destinos</a>
-          <a href="/about">Quiénes Somos</a>
+          <NavLink id="" to="/destinations" onClick={clickWindow}>Destinos</NavLink>
+          <NavLink id="about" to="/about" onClick={clickWindow}>Quiénes Somos</NavLink>
         </div>
         <button className="hamburger">
           <span></span>
@@ -34,11 +31,16 @@ const Navbar = () => {
     </nav>
   );
 
+  
+
   // eslint-disable-next-line no-unreachable
   const hamburger = document.querySelector(".hamburger");
   hamburger.addEventListener("click", function () {
     this.hamburger.toggle("is-active");
   });
 };
+
+
+
 
 export default Navbar;
